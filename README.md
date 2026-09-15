@@ -24,7 +24,7 @@ See [DETAILS.md](DETAILS.md) for a detailed description of all behavior changes.
 
 ### Outer Wilds Mod Manager
 
-TODO, yet to be submitted.
+TODO, pending approval.
 
 ### Manual Install
 
