@@ -27,9 +27,8 @@ jobs:
     steps:
       - name: Checkout
         uses: "actions/checkout@v5"
-
-      - name: Fetch
-        run: git fetch
+        with:
+          submodules: true
 
       - name: Read Manifest
         id: read-manifest
