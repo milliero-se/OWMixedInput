@@ -1,0 +1,3 @@
+[submodule "OWMixedInput/GyroHelpers"]
+	path = OWMixedInput/GyroHelpers
+	url = https://github.com/NaokoAF/GyroHelpers.git

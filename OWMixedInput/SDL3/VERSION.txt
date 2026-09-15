@@ -1,0 +1,2 @@
+SDL3.4.16 via https://github.com/libsdl-org/SDL/releases/download/release-3.4.16/SDL3-3.4.16-win32-x64.zip on 09/06/26
+SDL3-CS legacy via https://github.com/flibitijibibo/SDL3-CS commit c42d07e

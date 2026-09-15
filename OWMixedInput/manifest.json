@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/manifest_schema.json",
+  "filename": "OWMixedInput.dll",
+  "author": "Millie Rose",
+  "name": "OWMixedInput",
+  "uniqueName": "MillieRose.OWMixedInput",
+  "version": "0.1.0",
+  "owmlVersion": "2.16.2",
+  "dependencies": [],
+  "conflicts": ["Novaenia.MouseFix"]
+}

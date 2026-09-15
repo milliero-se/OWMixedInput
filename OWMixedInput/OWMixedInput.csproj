@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Copyright>Copyright © 2026 Millie Rose</Copyright>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <NoWarn>MSB3270</NoWarn>
+    <DebugType>portable</DebugType>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="OWML" Version="2.16.2" />
+    <PackageReference Include="OuterWildsGameLibs" Version="1.1.15.1018" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Remove then include because double-including is an error. -->
+    <Compile Remove="OWMixedInput/Settings.Generated.cs" />
+    <Compile Include="OWMixedInput/Settings.Generated.cs" />
+  </ItemGroup>
+  <Target Name="Generate_Settings" BeforeTargets="BeforeCompile" Inputs="default-config.json;Generate_Settings_cs.py" Outputs="src/Settings.Generated.cs">
+
+    <Exec Command="python3 Generate_Settings_cs.py;" />
+  </Target>
+  <ItemGroup>
+    <ContentWithTargetPath Include="SDL3/SDL3.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>SDL3.dll</TargetPath>
+    </ContentWithTargetPath>
+    <None Include="SDL3/SDL3.dll" />
+    <None Include="default-config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OWMixedInput.csproj.user" />
+  </ItemGroup>
+</Project>

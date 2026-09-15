@@ -1,0 +1,480 @@
+{
+    "enabled": true,
+    "comments": [
+        "This file is used as the source of truth for the mod settings.",
+        "It is used to generate 'Settings.Generated.cs' via 'Generate_Settings.py'.",
+        "The csproj automatically regenerates the source file when it is outdated.",
+        "The 'option_names' key is not defined by OWML.",
+        "The source generator uses 'option_names' to name enum variants for options that are not valid identifiers."
+    ],
+    "settings": {
+        "Primary Settings": {
+            "type": "separator"
+        },
+        "ControlScheme": {
+            "title": "Primary Control Scheme",
+            "tooltip": "Select the primary control scheme for this mod. On its own, this setting has no effect. However, other settings which are set to 'Default' will match your primary control scheme instead of the vanilla 'Last Input' behavior.",
+            "type": "selector",
+            "value": "Last Input",
+            "options": [
+                "Last Input",
+                "Gamepad",
+                "KB&M"
+            ],
+            "option_names": {
+                "Last Input": "Vanilla",
+                "KB&M": "KBM"
+            }
+        },
+
+        "User Interface Settings": {
+            "type": "label"
+        },
+        "UserInterface": {
+            "title": "User Interface Style",
+            "tooltip": "Select the style of button prompts and menus. Use 'Last Input' for vanilla behavior.",
+            "type": "selector",
+            "value": "Default",
+            "options": [
+                "Default",
+                "Last Input",
+                "Gamepad",
+                "KB&M"
+            ],
+            "option_names": {
+                "Last Input": "Vanilla",
+                "KB&M": "KBM"
+            }
+        },
+        "Cursor": {
+            "title": "Mouse Cursor",
+            "tooltip": "Select whether the game can display the mouse cursor. Use 'Last Input' for vanilla behavior.",
+            "type": "selector",
+            "value": "Default",
+            "options": [
+                "Default",
+                "Last Input",
+                "On",
+                "Off"
+            ],
+            "option_names": {
+                "Last Input": "Vanilla",
+                "On": "Yes",
+                "Off": "No"
+            }
+        },
+        "VirtualKeyboard": {
+            "title": "Virtual Keyboard",
+            "tooltip": "Choose when the game will display a virtual keyboard for text fields. Use 'Steam Deck' for vanilla behavior.",
+            "type": "selector",
+            "value": "Steam Deck",
+            "options": [
+                "Steam Deck",
+                "Big Picture Mode",
+                "Off"
+            ],
+            "option_names": {
+                "Steam Deck": "Vanilla",
+                "Big Picture Mode": "Yes",
+                "Off": "No"
+            }
+        },
+
+        "Gamepad Settings": {
+            "type": "label"
+        },
+        "Rumble": {
+            "title": "Use Rumble",
+            "tooltip": "Choose when the gamepad can rumble. Use 'Last Input' for vanilla behavior. Note that the vanilla 'Rumble' setting must be enabled for rumble to function.",
+            "type": "selector",
+            "value": "Default",
+            "options": [
+                "Default",
+                "Last Input",
+                "Always",
+                "Never"
+            ],
+            "option_names": {
+                "Last Input": "Vanilla",
+                "Always": "Yes",
+                "Never": "No"
+            }
+        },
+
+        "Mouse Settings": {
+            "type": "label"
+        },
+        "MouseSmoothing": {
+            "title": "Mouse Smoothing",
+            "tooltip": "Enable mouse smoothing. Use 'On' for vanilla behavior.",
+            "type": "toggle",
+            "value": true
+        },
+        "MouseSensitivity": {
+            "title": "Mouse Sensitivity Scale",
+            "tooltip": "Select the secret settings sensitivity scale for mouse inputs. Use 'Mouse' for vanilla behavior. Use 'Joystick' for pre-patch 15 values.",
+            "type": "selector",
+            "value": "Mouse",
+            "options": [
+                "Mouse",
+                "Joystick"
+            ]
+        },
+
+        "Thruster Settings": {
+            "type": "label"
+        },
+        "RollAxis": {
+            "title": "Thruster Roll Axis",
+            "tooltip": "Select which inputs are used as roll in 'Roll Mode'. 'Yaw' uses 'Look-Y'. 'X' uses 'Move-X'. 'Up/down' uses 'Thrust Up' and 'Thrust Down'. Use 'Yaw' for vanilla behavior.",
+            "type": "selector",
+            "value": "Yaw",
+            "options": [
+                "Yaw",
+                "X",
+                "Up/down"
+            ],
+            "option_names": {
+                "Up/down": "Y"
+            }
+        },
+        "InvertRoll": {
+            "title": "Invert Roll",
+            "tooltip": "Invert ship roll in 'Roll Mode'. Use 'Off' for vanilla behavior",
+            "type": "toggle",
+            "value": "false"
+        },
+        "SquareifyXZ": {
+            "title": "Square XZ",
+            "tooltip": "Extend the shape of the translational XZ thruster inputs to a square. This allows firing both translational thrusters at max simultaneously. This setting does not affect mouse inputs. Use 'Off' for vanilla behavior.",
+            "type": "toggle",
+            "value": false
+        },
+        "SquareifyPitchYaw": {
+            "title": "Square Pitch/Yaw",
+            "tooltip": "Extend the shape of the rotational pitch/yaw thruster inputs to a square. This allows firing both rotational thrusters at max simultaneously. This setting does not affect mouse inputs. Use 'Off' for vanilla behavior.",
+            "type": "toggle",
+            "value": false
+        },
+        "ExtendRotationalThrusters": {
+            "title": "Extended Rotational Thruster Range",
+            "tooltip": "Double the range of the allowed rotational thruster inputs. This can make mouse inputs feel more responsive. This setting does not affect joystick and button inputs as they are limited in size. Use 'On' to best approximate vanilla behavior.",
+            "type": "toggle",
+            "value": true
+        },
+
+        "Camera Settings": {
+            "type": "label"
+        },
+        "GamepadSensitivityRatio": {
+            "title": "Gamepad Sensitivity Ratio",
+            "tooltip": "Camera vertical sensitivity ratio for gamepad inputs. 0.75 means vertical sensitivity is 75% slower. Use '0.75' for vanilla behavior.",
+            "type": "number",
+            "value": 0.75
+        },
+        "MouseSensitivityRatio": {
+            "title": "Mouse Sensitivity Ratio",
+            "tooltip": "Camera vertical sensitivity ratio for mouse inputs. 0.75 means vertical sensitivity is 75% slower. Use '1.0' for vanilla behavior.",
+            "type": "number",
+            "value": 1.0
+        },
+        "FreeLook": {
+            "title": "Allow Free Look",
+            "tooltip": "Toggle the vanilla 'Free Look' feature. You may wish to disable free look when using the gyro camera, as it serves a similar purpose. Use 'On' for vanilla behavior",
+            "type": "toggle",
+            "value": true
+        },
+        "SlowCamera": {
+            "title": "Allow Slow Camera",
+            "tooltip": "Allow the game to slow camera inputs when zooming/waking. Use 'On' for vanilla behavior.",
+            "type": "toggle",
+            "value": true
+        },
+        "RecenterTime": {
+            "title": "Recenter Time (ms)",
+            "tooltip": "The amount of time it takes to recenter the camera when the 'Recenter Camera' command is activated. Measured in milliseconds. Choose your binding at the bottom of this menu.",
+            "type": "number",
+            "value": 200
+        },
+
+        "Gyro Settings": {
+            "type": "label"
+        },
+        "GyroEnabled": {
+            "title": "Gyro Camera",
+            "tooltip": "Use gamepad gyro to control the camera (and the roasting stick).",
+            "type": "toggle",
+            "value": "false"
+        },
+        "GyroSensitivity": {
+            "title": "Sensitivity",
+            "tooltip": "Gryo sensitivity in natural units (i.e. 2.0 means the camera rotates twice as far as your controller).",
+            "type": "number",
+            "value": 1.0
+        },
+        "GyroSensitivityRatio": {
+            "title": "Sensitivity Ratio",
+            "tooltip": "Gyro vertical sensitivity ratio. 0.75 means vertical sensitivity is 75% slower.",
+            "type": "number",
+            "value": 1.0
+        },
+        "GyroSpace": {
+            "title": "Space",
+            "tooltip": "Algorithm used to convert gyro input to camera turns. 'Player Turn' or 'Player Learn' is recommended. Try them and see!",
+            "type": "selector",
+            "value": "Player Turn",
+            "options": [
+                "Local Yaw",
+                "Local Roll",
+                "Player Turn",
+                "Player Lean"
+            ],
+            "option_names": {
+                "Local Yaw": "LocalYaw",
+                "Local Roll": "LocalRoll",
+                "Player Turn": "PlayerTurn",
+                "Player Lean": "PlayerLean"
+            }
+        },
+        "GyroButtonMode": {
+            "title": "Gyro Button Behavior",
+            "tooltip": "Select the behavior of the 'Gyro' command. Choose your binding at the bottom of this menu. 'Hold' means gyro inputs will be processed only when the button is held. 'Mute' means gyro inputs will be not be processed when the button is held. 'Toggle' means gyro inputs will not be processed by default but can be toggled by pressing the gyro button. 'Disabled' means gyro inputs will always be processed.",
+            "type": "selector",
+            "value": "Disabled",
+            "options": [
+                "Disabled",
+                "Hold",
+                "Mute",
+                "Toggle"
+            ]
+        },
+        "GyroCalibrateButtonMode": {
+            "title": "Calibrate Button Behavior",
+            "tooltip": "Select the behavior of the 'Calibrate' command. Choose your binding at the bottom of this menu. 'Press' means that gyro calibration will occur immediately once the button is pressed. 'Hold' means that gyro calibration will occur after the button is briefly held. 'In Menus' means gyro calibration will occur when pressing the button while in a menu.",
+            "type": "selector",
+            "value": "In Menus",
+            "options": [
+                "In Menus",
+                "Press",
+                "Hold"
+            ],
+            "option_names": {
+                "In Menus": "Menu"
+            }
+        },
+        "GyroCalibrateOnConnect": {
+            "title": "Calibrate On Connect",
+            "tooltip": "Calibrate gamepads immediately upon connection.",
+            "type": "toggle",
+            "value": "true"
+        },
+        "GyroTighteningThreshold": {
+            "title": "Tightening Threshold (deg/s)",
+            "tooltip": "Smoothly squeezes rotations slower than this threshold toward 0, like a soft deadzone. Measured in degrees per second. Helps reduce effects of shaky hands.",
+            "type": "number",
+            "value": 6.0
+        },
+        "GyroSmoothingThreshold": {
+            "title": "Smoothing Threshold (deg/s)",
+            "tooltip": "Rotations slower than this threshold are smoothed. Measured in degrees per second. Helps reduce effects of shaky hands, but adds latency.",
+            "type": "number",
+            "value": 0.0
+        },
+        "GyroSmoothingTime": {
+            "title": "Smoothing Time (ms)",
+            "tooltip": "Amount of time to smooth gyro when below the smoothing threshold. Measured in milliseconds.",
+            "type": "number",
+            "value": 75.0
+        },
+        "GyroAccelerationThresholdSlow": {
+            "title": "Acceleration Threshold Slow (deg/s)",
+            "tooltip": "Lower threshold for acceleration. Measured in degrees per second. Rotations slower than this threshold use 'Acceleration Sensitivity Slow'. Rotations between the slow threshold and fast threshold use a sensitivity interpolated between the slow and fast sensitivity.",
+            "type": "number",
+            "value": 0.0
+        },
+        "GyroAccelerationThresholdFast": {
+            "title": "Acceleration Threshold Fast (deg/s)",
+            "tooltip": "Upper threshold for acceleration. Measured in degrees per second. Rotations faster than this threshold use 'Acceleration Sensitivity Slow'. Rotations between the slow threshold and fast threshold use a sensitivity interpolated between the slow and fast sensitivity.",
+            "type": "number",
+            "value": 75.0
+        },
+        "GyroAccelerationSensitivitySlow": {
+            "title": "Acceleration Sensitivity Slow",
+            "tooltip": "Acceleration sensitivity below 'Acceleration Threshold Slow'. Measured in natural units. Rotations between the slow threshold and fast threshold use a sensitivity interpolated between the slow and fast sensitivity.",
+            "type": "number",
+            "value": 1.0
+        },
+        "GyroAccelerationSensitivityFast": {
+            "title": "Acceleration Sensitivity Fast",
+            "tooltip": "Acceleration sensitivity above 'Acceleration Threshold Fast'. Measured in natural units. Rotations between the slow threshold and fast threshold use a sensitivity interpolated between the slow and fast sensitivity.",
+            "type": "number",
+            "value": 1.0
+        },
+
+        "Flick Stick Settings": {
+            "type": "label"
+        },
+        "FlickEnabled": {
+            "title": "Flick Stick",
+            "tooltip": "Replace joystick camera with flick stick. Thrusters, including the jetpack, will control as usual. Mouse inputs are unchanged. Gyro camera does not need to be enabled for this setting to take effect.",
+            "type": "toggle",
+            "value": false
+        },
+        "FlickThreshold": {
+            "title": "Flick Threshold",
+            "tooltip": "Activation level required to trigger a flick. Values between 0.9 and 0.99 recommended. The threshold is applied after joystick deadzoning but does not consider joystick sensitivity.",
+            "type": "number",
+            "value": 0.9
+        },
+        "FlickTime": {
+            "title": "Flick Time (ms)",
+            "tooltip": "Amount of time it takes to perform an initial flick. Measured in milliseconds.",
+            "type": "number",
+            "value": 200.0
+        },
+        "FlickSnapping": {
+            "title": "Snapping Zones",
+            "tooltip": "Number of snapping zones. When using two or more snapping zones, initial flicks are rounded to the center of the zone. When using one snapping zone, the 'Forward Deadzone' setting is consulted to determine whether or not to snap.",
+            "type": "selector",
+            "value": "None",
+            "options": [
+                "None",
+                "One",
+                "Two",
+                "Four",
+                "Six",
+                "Eight"
+            ]
+        },
+        "FlickFowardDeadzone": {
+            "title": "Forward Deadzone (deg)",
+            "tooltip": "When 'Snapping Zones' is 'One', initial flicks within 'Forward Deadzone' degrees of forward in either direction are rounded to zero. Measured in degrees. Helps avoid unintended flicks when moving the stick up.",
+            "type": "number",
+            "value": 7.0
+        },
+        "FlickSmoothingThreshold": {
+            "title": "Smoothing Threshold (deg)",
+            "tooltip": "Angle changes below this threshold are smoothed. Measured in degrees. Helps compensate for limited joystick resolution. Leave at default if unsure.",
+            "type": "number",
+            "value": 2.3
+        },
+        "FlickSmoothingTime": {
+            "title": "Smoothing Time (ms)",
+            "tooltip": "Amount of time to smooth angles when below the smoothing threshold. Measured in milliseconds. Leave at default if unsure.",
+            "type": "number",
+            "value": 64.0
+        },
+
+        "Nitpicky Settings": {
+            "type": "label"
+        },
+        "HelmetShake": {
+            "title": "Helmet Shake",
+            "tooltip": "Enable helmet HUD shake based on look inputs. Use 'On' for vanilla behavior.",
+            "type": "toggle",
+            "value": true
+        },
+        "InputFade": {
+            "title": "Allow Input Fading",
+            "tooltip": "Allow the game to fade inputs on rare occasions (e.g. loop beginnings and ends). Use 'On' for vanilla behavior.",
+            "type": "toggle",
+            "value": true
+        },
+        "ProbeOverlaps": {
+            "title": "Probe Overlap Checks",
+            "tooltip": "Select which 'Tool Action' commands are checked when determining if 'Retrieve Scout' command must be held to activate. If 'Primary' is selected, the secondary action will be disabled when it overlaps with 'Retrieve Scout'. If 'Both' is selected, 'Retrieve Scout' must be held to activate if it overlaps with either 'Tool Action Primary' or 'Tool Action Secondary'. Use 'Primary' for vanilla behavior.",
+            "type": "selector",
+            "value": "Primary",
+            "options": [
+                "Primary",
+                "Both"
+            ]
+        },
+        "SpaceWalkRangeX": {
+            "title": "Space Walk Camera Range X (deg)",
+            "tooltip": "The range of the camera X-axis during a space walk. Measured in degrees. This is only relevant when using gyro controls as otherwise the camera is fixed during a space walk. You may wish to leave this value relatively small or else you may forget which direction is forward. This is particularly relevant in the X-direction.",
+            "type": "number",
+            "value": "40"
+        },
+        "SpaceWalkRangeY": {
+            "title": "Space Walk Camera Range Y (deg)",
+            "tooltip": "The range of the camera Y-axis during a space walk. Measured in degrees. This is only relevant when using gyro controls as otherwise the camera is fixed during a space walk. You may wish to leave this value relatively small or else you may forget which direction is forward.",
+            "type": "number",
+            "value": "160"
+        },
+
+        "Control Scheme Overrides": {
+            "type": "label"
+        },
+        "ProbeLauncher": {
+            "title": "Probe Launcher Control Scheme",
+            "tooltip": "Select the control scheme for probe launchers. Whether the 'Retrieve Scout' command must be held to activate is determined by whether it overlaps with the 'Tool Action' commands in the selected control scheme. Use 'Last Input' for vanilla behavior. Use 'Hybrid' to check overlaps in both control schemes.",
+            "type": "selector",
+            "value": "Default",
+            "options": [
+                "Default",
+                "Last Input",
+                "Hybrid",
+                "Gamepad",
+                "KB&M"
+            ],
+            "option_names": {
+                "Last Input": "Vanilla",
+                "KB&M": "KBM"
+            }
+        },
+        "Autopilot": {
+            "title": "Autopilot Control Scheme",
+            "tooltip": "Select the control scheme for the ship's autopilot. When the control scheme is 'Gamepad', autopilot is disabled when a probe is anchored to avoid overlapping controls. Use 'Last Input' for vanilla behavior.",
+            "type": "selector",
+            "value": "Default",
+            "options": [
+                "Default",
+                "Last Input",
+                "Gamepad",
+                "KB&M"
+            ],
+            "option_names": {
+                "Last Input": "Vanilla",
+                "KB&M": "KBM"
+            }
+        },
+        "ShipLog": {
+            "title": "Ship Log Control Scheme",
+            "tooltip": "Select the control scheme for scrolling the description of the ship log. When the control scheme is 'Gamepad', 'Look' inputs are used to scroll the log. When the control scheme is 'KB&M', 'Tool' inputs are used to scroll the log. Use 'Last Input' for vanilla behavior.",
+            "type": "selector",
+            "value": "Default",
+            "options": [
+                "Default",
+                "Last Input",
+                "Gamepad",
+                "KB&M"
+            ],
+            "option_names": {
+                "Last Input": "Vanilla",
+                "KB&M": "KBM"
+            }
+        },
+        "RoastingStick": {
+            "title": "Roasting Stick Control Scheme",
+            "tooltip": "Select the sensitivity for the roasting stick. The controls are more sensitive when the control scheme is 'Gamepad'. Use 'Last Input' for vanilla behavior.",
+            "type": "selector",
+            "value": "Default",
+            "options": [
+                "Default",
+                "Last Input",
+                "Gamepad",
+                "KB&M"
+            ],
+            "option_names": {
+                "Last Input": "Vanilla",
+                "KB&M": "KBM"
+            }
+        },
+
+        "Control Bindings": {
+            "type": "label",
+            "comment": "The menu system automatically adds the control binding settings at the end of the mod menu."
+        }
+    }
+}
