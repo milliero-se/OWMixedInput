@@ -26,9 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: "actions/checkout@v5"
-        with:
-          submodules: true
+        uses: "actions/checkout@v7"
 
       - name: Read Manifest
         id: read-manifest
@@ -56,12 +54,13 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: "actions/checkout@v4"
+        uses: "actions/checkout@v7"
         with:
+          submodules: true
           lfs: true
 
       - name: Setup .NET
-        uses: "actions/setup-dotnet@v4"
+        uses: "actions/setup-dotnet@v6"
 
       - name: Remove .csproj.user
         run: if (Test-Path ${{ env.PROJ_NAME }}/${{ env.PROJ_NAME }}.csproj.user) { rm ${{ env.PROJ_NAME }}/${{ env.PROJ_NAME }}.csproj.user }
@@ -70,7 +69,7 @@ jobs:
         run: dotnet build -c Release
 
       - name: Upload Artifact
-        uses: "actions/upload-artifact@v4"
+        uses: "actions/upload-artifact@v7"
         with:
           name: "${{ env.PROJ_USERNAME }}.${{ env.PROJ_NAME }}"
           path: "${{ env.PROJ_NAME }}/bin/Release"
