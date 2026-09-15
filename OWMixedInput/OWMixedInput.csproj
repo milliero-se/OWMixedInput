@@ -22,7 +22,7 @@
   </ItemGroup>
   <Target Name="Generate_Settings" BeforeTargets="BeforeCompile" Inputs="default-config.json;Generate_Settings_cs.py" Outputs="src/Settings.Generated.cs">
 
-    <Exec Command="python3 Generate_Settings_cs.py;" />
+    <Exec Command="python3 Generate_Settings_cs.py" />
   </Target>
   <ItemGroup>
     <ContentWithTargetPath Include="SDL3/SDL3.dll">
