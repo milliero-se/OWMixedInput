@@ -24,7 +24,7 @@ See [DETAILS.md](DETAILS.md) for a detailed description of all behavior changes.
 
 ### Outer Wilds Mod Manager
 
-TODO, pending approval.
+Visit the [mod page](https://outerwildsmods.com/mods/owmixedinput/) or search for OWMixedInput in the [Outer Wilds Mod Manager](https://outerwildsmods.com/mod-manager/).
 
 ### Manual Install
 
