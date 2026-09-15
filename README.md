@@ -22,16 +22,27 @@ See [DETAILS.md](DETAILS.md) for a detailed description of all behavior changes.
 
 ## Installation
 
-TODO
+### Outer Wilds Mod Manager
+
+TODO, yet to be submitted.
+
+### Manual Install
+
+- Install [OWML](https://github.com/ow-mods/owml).
+- Download the latest build from the [Releases](https://github.com/milliero-se/OWMixedInput/releases).
+- Unpack the downloaded `.zip` into your OWML mods folder.
+For me, this is `~/.local/share/OuterWildsModManager/OWML/Mods`.
 
 ## Build Instructions
 
 You should be able to build the mod yourself by cloning the repo and running `dotnet build -c Release` from the project root.
-If you have issues, you may need to tweak `OWMixedInput.csproj.user` to point to your OWML install.
+If you have issues, you may need to tweak `OWMixedInput.csproj.user` to point to your OWML install (or just delete it).
 
 The `Settings.Generated.cs` source file is auto-generated from the information in `default-config.json` with `Generate_Settings_cs.py`.
 This script requires `python3` and is run automatically by `dotnet build` when `Settings.Generated.cs` is out of date.
-I have no clue if the way I have integrated `phyton3` into the build system works on Windows, but if you don't touch `default-config.json`, you shouldn't need to run `python3`.
+If you do not have `python3`, you can `touch Settings.Generated.cs` to prevent `dotnet build` from trying to regenerate it.
+
+The build works on my Debian machine and on Github's Windows runner, so I expect it will work on most machines.
 
 ## Mod Compatibility
 
