@@ -19,10 +19,10 @@ To make the most of this mod, you should change some settings to your liking.
 * [Thruster Settings](#thruster-settings)
   * [Thruster Roll Axis](#thruster-roll-axis)
   * [Invert Roll](#invert-roll)
-  * [Square XZ & Pitch/Yaw](#square-xz-&-pitch/yaw)
+  * [Square XZ & Pitch/Yaw](#square-xz--pitchyaw)
   * [Extended Rotational Thruster Range](#extended-rotational-thruster-range)
 * [Camera Settings](#camera-settings)
-  * [Gamepad/Mouse Sensitivity Ratio](#gamepad/mouse-sensitivity-ratio)
+  * [Gamepad/Mouse Sensitivity Ratio](#gamepadmouse-sensitivity-ratio)
   * [Allow Free Look](#allow-free-look)
   * [Allow Slow Camera](#allow-slow-camera)
   * [Recenter Time](#recenter-time)
@@ -313,7 +313,7 @@ If you really want either of these added, please file an issue.
 
 ## Gyro Button Behavior
 
-Select the behavior of the ['Gyro'](#command) command.
+Select the behavior of the ['Gyro'](#gyro) command.
 
 Options: 'Disabled', 'Hold', 'Mute', or 'Toggle'
 
@@ -576,7 +576,7 @@ You can use the 'Open Folder' option in the Outer Wilds Mod Manager, backup your
 
 ## Gyro
 
-Command used for enabling/disabling gyro based on the ['Gyro Button Mode'](#gyro-button-mode) setting. 
+Command used for enabling/disabling gyro based on the ['Gyro Button Behavior'](#gyro-button-behavior) setting. 
 
 This binding has no effect unless ['Gyro Camera'](#gyro-camera) is enabled.
 
@@ -585,7 +585,7 @@ This binding has no effect unless ['Gyro Camera'](#gyro-camera) is enabled.
 Command used to calibrate the gyro.
 
 Lay the controller on a flat surface and hold this button down for a second or two to correct drift.
-Affected by the ['Calibrate Button Mode'](#calibrate-button-mode) setting.
+Affected by the ['Calibrate Button Behavior'](#calibrate-button-behavior) setting.
 
 This binding has no effect unless ['Gyro Camera'](#gyro-camera) is enabled.
 

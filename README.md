@@ -115,7 +115,7 @@ If the performance is causing problems for you, please file an issue.
 
 This project is licensed under the [MIT](LICENSE) license.
 
-This project contains [NaokoAF's GyroHelpers](https://github.com/NaokoAF/GyroHelpers/tree) as a submodule. GyroHelpers is licensed under the [MIT](https://github.com/NaokoAF/GyroHelpers/blob/master/LICENSE) license.
+This project contains [NaokoAF's GyroHelpers](https://github.com/NaokoAF/GyroHelpers) as a submodule. GyroHelpers is licensed under the [MIT](https://github.com/NaokoAF/GyroHelpers/blob/master/LICENSE) license.
 
 This project contains an [SDL3](https://wiki.libsdl.org/SDL3/FrontPage) binary. SDL3 is licensed under the [zlib](https://github.com/libsdl-org/SDL/blob/main/LICENSE.txt) license.
 
