@@ -89,7 +89,7 @@ If anyone can test this on a Windows machine or let me know if I am doing someth
 SDL3 uses the `hidraw` API to obtain gyro inputs.
 Usually, you will need `udev` rules to make sure your user has access to the relevant `hidraw` device.
 
-See [ValvaSoftware/steam-devices](https://github.com/ValveSoftware/steam-devices) or [fabiscafe/game-devices-udev](https://github.com/fabiscafe/game-devices-udev) for more information.
+See [ValveSoftware/steam-devices](https://github.com/ValveSoftware/steam-devices) or [fabiscafe/game-devices-udev](https://github.com/fabiscafe/game-devices-udev) for more information.
 
 ## Contributing
 
